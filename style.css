@@ -58,6 +58,25 @@ main {
   color: palevioletred;
 }
 
+.weather-app-container {
+  display: flex;
+}
+
+.weather-app-icon {
+  font-size: 44px;
+  margin-top: 22px;
+}
+
+.weather-app-temperature {
+  font-size: 88px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.weather-app-unit {
+  margin-top: 18px;
+  font-size: 28px;
+}
 footer {
   text-align: center;
   border-top: 1px solid #f9f7f9;
