@@ -16,31 +16,32 @@
   <body>
     <div class="weather-app">
       <header>
-        <form class="search-form">
+        <form class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Enter a city"
             required
             class="search-form-input"
+            id="search-form-input"
           />
           <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
       <main>
         <div class="weather-app-data">
-        <div>
-          <h1 class="weather-app-city">San Francisco</h1>
-          <p class="weather-app-details">
-            Saturday 11:35, broken clouds
-            <br />
-            Humidity: <strong>70%</strong>, Wind: <strong>6.69 km/h</strong>
-          </p>
-        </div>
-<div class="weather-app-container">
-  <div class="weather-app-icon">🌥️</div>
-        <div class="weather-app-temperature">9</div>
-        <div class="weather-app-unit">ºC</div>
-        </div>
+          <div>
+            <h1 class="weather-app-city" id="city">San Francisco</h1>
+            <p class="weather-app-details">
+              Saturday 11:35, broken clouds
+              <br />
+              Humidity: <strong>70%</strong>, Wind: <strong>6.69 km/h</strong>
+            </p>
+          </div>
+          <div class="weather-app-container">
+            <div class="weather-app-icon">🌥️</div>
+            <div class="weather-app-temperature">9</div>
+            <div class="weather-app-unit">ºC</div>
+          </div>
         </div>
       </main>
       <footer>
@@ -61,5 +62,6 @@
         >
       </footer>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
