@@ -52,6 +52,47 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+
+  let forecastHtml = "";
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+<div class="weather-forecast-day">
+<div class="weather-forecast-date">${day}</div>
+<div class="weather-forecast-icon">☀️</div>
+<div class="weather-forecast-temperatures">
+<div class="weather-forecast-temperature">
+<strong>15&deg</strong>
+</div>
+<div class="weather-forecast-temperature">9&deg</div>
+</div>
+</div>
+`;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 searchCity("Johannesburg");
+
+displayForecast();
+//<div class="row">
+// <div class="col-2">
+// <div class="weather-forecast-date">thur</div>
+//  <img
+//   src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png"
+//   alt=""
+//   width="42"
+// />
+// <div class="weather-forecast-temps">
+//   <span class="weather-forecast-temp-max">18&deg </span>
+//   <span class="weather-forecast-temp-min">12&deg</span>
+// </div>
+//</div>
+//</div>
