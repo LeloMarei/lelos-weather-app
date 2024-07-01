@@ -55,7 +55,7 @@ function handleSearchSubmit(event) {
 }
 
 function formatDay(timestamp) {
-  let date = new date(timestamp * 1000);
+  let date = new Date(timestamp * 1000);
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return days[date.getDay()];
 }
@@ -73,16 +73,17 @@ function displayForecast(response) {
       forecastHtml =
         forecastHtml +
         `
+        <div>
 <div class="weather-forecast-day">
-<div class="weather-forecast-date">${formatDay(day.time)}
-</div>
-<img src="${day.condition.icon_url}" class="weather-forecast-icon"/>
+  <div class="weather-forecast-date">${formatDay(day.time)}
+  </div>
+  <img src="${day.condition.icon_url}" class="weather-forecast-icon" />
 </div>
 <div class="weather-forecast-temperatures">
-<div class="weather-forecast-temperature">
-<strong>${Math.round(day.temperature.maximum)}</strong>
-</div>
-<div class="weather-forecast-temperature">">${Math.round(
+  <div class="weather-forecast-temperature">
+    <strong>${Math.round(day.temperature.maximum)}</strong>
+  </div>
+  <div class="weather-forecast-temperature">${" "}${Math.round(
           day.temperature.minimum
         )}</div>
 </div>
